@@ -1,0 +1,173 @@
+.content h2 {
+    text-align: center;
+}
+
+.services-header {
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+.stack-header {
+  font-size: 2rem;
+  margin-bottom: 4.5rem;
+  margin-top: 0;
+}
+
+.flex-stack-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stack-image {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.stack-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.stack-text {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.stack-item:hover .stack-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stack-item:hover .stack-image {
+  transform: translateY(-5px);
+}
+
+.stack-item:hover .stack-image img {
+  transform: scale(1.1);
+}
+
+.flex-services-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.service-item {
+  box-shadow: #333;
+  display: block;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  position: relative;
+  border-radius: 6px;
+  background-color: rgb(230, 230, 230);
+  flex: 0 1 350px;
+  padding: 1.5rem;
+}
+
+.service-item-divider {
+    height: 0.2rem;
+    width: 3rem;
+    background-color: rgb(148, 139, 255);
+}
+
+@media (max-width: 1200px) {
+  .stack-image {
+    width: 7rem;
+    height: 7rem;
+  }
+  .stack-text {
+    font-size: 1.2rem;
+  }
+  .service-item {
+    flex: 0 1 250px;
+    font-size: 1rem;
+  }
+  .flex-services-items {
+    gap: 6rem;
+  }
+  .stack-header {
+    font-size: 1.5rem;
+  }
+
+  .services-header {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  
+  .stack-header {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .services-header {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .stack-image {
+    width: 5rem;
+    height: 5rem;
+  }
+  .stack-text {
+    font-size: 0.9rem;
+  }
+  .flex-services-items {
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  .service-item {
+    max-width: 18rem;
+    max-height: 12rem;
+    padding: 0.8rem;
+  }
+}
