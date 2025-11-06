@@ -1,0 +1,248 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.variant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-block {
+    display: inline-block;
+    margin: 30px;
+    text-align: center;
+}
+
+.picture {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 15px;
+    position: relative;
+    border: 2px solid #333;
+}
+
+#ship-scene {
+    background: linear-gradient(135deg, #e2f1f7 0%, #92c2e8 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.sun {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #f7df58;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+    box-shadow: 0 0 100px 100px rgba(251, 237, 158, 0.4);
+}
+
+.arches {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  display: flex;
+}
+.arch {
+  width: 35px;
+  height: 110px;
+  border: 7px solid #919191;
+  border-bottom: none;
+  border-radius: 60px 60px 0 0;
+}
+
+.ship {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    z-index: 0;
+}
+
+.ship-body {
+    width: 150px;
+    height: 50px;
+    background-color:rgb(164, 110, 53);
+    clip-path: polygon( 100% 0, 0 0, 25% 100%, 75% 100%);
+    position: relative;
+}
+
+.ship-line1 {
+    width: 150px;
+    height: 5px;
+    position: absolute;
+    bottom: 47px;
+    left: 0px;
+    background-color: #985a2d;
+    z-index: 1;
+}
+
+.ship-line2 {
+    width: 130px;
+    height: 5px;
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    background-color: #985a2d;
+    z-index: 1;
+}
+
+.ship-line3 {
+    width: 111px;
+    height: 5px;
+    position: absolute;
+    bottom: 23px;
+    left: 20px;
+    background-color: #985a2d;
+    z-index: 1;
+}
+
+.ship-mast {
+    position: absolute;
+    width: 5px;
+    height: 70px;
+    background: #8B4513;
+    top: -70px;
+    left: 60px;
+}
+
+.ship-sail {
+    position: absolute;
+    width: 160px;
+    height: 65px;
+    background: linear-gradient(135deg, #fb1d1d 0%, #ffe2e2 100%);
+    top: -70px;
+    left: 63px;
+    clip-path: polygon(0% 100%, 0% 0%, 50% 82%);
+}
+
+.ship-flag {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: rgb(7, 7, 7);
+    top: -85px;
+    left: 60px;
+    /*тут кривую безье используем*/
+    /*Q30,10 - это т.н. точка опоры*/
+    /*M0,0 Q30,10 100,-30 - из точки 0,0 рисуем кривую к точке 100, -30*/
+    clip-path: path("M0,0 Q30,10 100,-30 L100, 0 Q10,30 0,15 Z");
+    /*"M0,0 Q20,10 150,-30 L20,20 Q20,35 0,15 Z"*/
+}
+
+.skull-dot1 {
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.skull-dot2 {
+  position: absolute;
+  top: 3px;
+  left: 16px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.skull-dot3 {
+  position: absolute;
+  top: 12px;
+  left: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.skull-dot4 {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.line1 {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  width: 12px;
+  height: 2px;
+  transform: 
+        translate(-50%, -50%)
+        rotate(45deg)
+        translateY(-1px);
+  background-color: #f0f0f0;
+}
+
+.line2 {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  width: 12px;
+  height: 2px;
+  transform: 
+        translate(-50%, -50%)
+        rotate(-45deg)
+        translateY(-1px);
+  background-color: #f0f0f0;
+}
+
+.ship-windows {
+    position: absolute;
+    bottom: 33px;
+    left: 17px;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+}
+
+.ship-window {
+    width: 11px;
+    height: 11px;
+    border-radius: 20%;
+    background-color: #f0f0f0;
+}
+
+.wave {
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, #d3e5ff 0%, #288ef4 100%);
+  border-radius: 50%;
+}
+.wave-1 {
+  position: absolute;
+  bottom: -20px;
+  left: -15px;
+  
+}
+.wave-2 {
+  position: absolute;
+  bottom: -10px;
+  left: 40px;
+}
+.wave-3 {
+  position: absolute;
+  bottom: -25px;
+  left: 90px;
+  
+}
+.wave-4 {
+  position: absolute;
+  bottom: -10px;
+  left: 150px;
+}
